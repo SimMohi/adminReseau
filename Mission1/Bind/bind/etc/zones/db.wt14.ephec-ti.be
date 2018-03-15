@@ -1,12 +1,15 @@
-;
- ; BIND reverse data file for broadcast zone
- ;
- $TTL	604800
- @  	IN	SOA	localhost. root.localhost. (
-		      1		; Serial
-		 604800		; Refresh
-		  86400		; Retry
-		2419200		; Expire
-		 604800 )	; Negative Cache TTL
- ;
- @  	IN	NS	localhost.
+$TTL    604800
+
+wt14.ephec-ti.be.        IN      SOA    ns1.wt14.ephec-ti.be. HE201357.students.ephec.be (
+                         2013020905       ; Serial
+                         3600             ; Refresh
+                         3000             ; Retry
+                         4619200          ; Expire
+                         604800 )         ; Minimum
+
+
+wt14.ephec-ti.be.                    IN                NS                   ns1.wt14.ephec-ti.be.
+ns1.wt14.ephec-ti.be.                IN                A                    54.37.65.53
+www.wt14.ephec-ti.be.                IN                A                    54.37.65.53
+b2b.wt14.ephec-ti.be.                IN                A                    54.37.65.53
+intranet.wt14.ephec-ti.be.           IN                A                    54.37.65.53

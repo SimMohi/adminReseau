@@ -9,7 +9,7 @@ wt14.ephec-ti.be.        IN      SOA    ns1.wt14.ephec-ti.be. HE201357.students.
 
 
 wt14.ephec-ti.be.                    IN                NS                   ns1.wt14.ephec-ti.be.
-ns1.wt14.ephec-ti.be.                IN                A                    54.37.65.53
-www.wt14.ephec-ti.be.                IN                A                    54.37.65.53
-b2b.wt14.ephec-ti.be.                IN                A                    54.37.65.53
-intranet.wt14.ephec-ti.be.           IN                A                    54.37.65.53
+ns1.wt14.ephec-ti.be.                IN                A                    54.37.65.61
+www.wt14.ephec-ti.be.                IN                A                    54.37.65.61
+b2b.wt14.ephec-ti.be.                IN                A                    54.37.65.61
+intranet.wt14.ephec-ti.be.           IN                A                    54.37.65.61

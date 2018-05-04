@@ -29,8 +29,8 @@ intranet	IN	CNAME	web
 
 ;Serveur sip
 sip.wt14.ephec-ti.be.	IN	A	54.37.65.61
-_sip._tcp               IN SRV 0 0 5060 sip.wt14.ephe-ti.be.
-_sip._udp		IN SRV 0 0 5060 sip.wt14.ephe-ti.be.
+_sip._udp               IN SRV 0 0 5060 sip.wt14.ephec-ti.be.
+_sip._tcp		IN SRV 0 0 5060 sip.wt14.ephec-ti.be.
 
 
 ; config mail

@@ -12,7 +12,7 @@ $ORIGIN wt14.ephec-ti.be.
 				3h)	;
 
 ;NS RECORDS
-	IN	NS	ns1.wt14.ephec-ti.be.		;Utilisé pour définir quels serveurs répondent pour cette zone.
+	IN	NS		ns1.wt14.ephec-ti.be.		;Utilisé pour définir quels serveurs répondent pour cette zone.
 	IN	MX	10	mail.wt14.ephec-ti.be.
 
 ;A Records
@@ -22,10 +22,20 @@ ns1	IN	A	54.37.65.61			; Cet enregistrement fait correspondre une adresse IP à 
 ;Configuration WEB
 
 web		IN	A	54.37.65.61 ; VPS - JULIEN
-service 	IN	A	54.37.65.61 ; VPS - JULIEN
 
 www		IN	CNAME	web
 b2b		IN	CNAME 	web
 intranet	IN	CNAME	web
-postfixadmin	IN	CNAME	service
-webmail		IN	CNAME	service
+
+;Serveur sip
+sip.wt14.ephec-ti.be.	IN	A	54.37.65.61
+
+; config mail
+
+mail 		IN	A	54.37.65.61 
+smtp					IN	CNAME	mail
+pop3					IN	CNAME	mail
+imap					IN	CNAME	mail
+mail._domainkey IN      TXT     ( "v=DKIM1; h=sha256; k=rsa; "
+          "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0GOkyXTL5wsyDNDK9DbyGc74V9D+ZMoiiY5RNsINGtCb934f2GGofpFAfZHTzBcUXLBqz3PfYylJEUgsy5YERWjpZfkZJvOBm/5PlLmQZVBLTJeSVhPjkJ24M5cn4TV2vCnpe9oO24cMuu4h8OOrvXiipKH9FtlVirlD3ZuPJSln2MuJtDZO4t0nkPmptBDYAbMXcHMLIeqGsJ"
+          "KhTB2tTsaeGZG18dcrxsIIukxM1bZX5JliilFJv7Lv+MMYm5sjfOQOfbAp3fcj6Z6NK3wxoX5gl0z8p8ft/sr9zhqIezYiOAEOc5SwYN0NH6SDhP0DwzFy9VDCNpNMsz3WIaYRfwIDAQAB" )  ; ----- DKIM key mail for wt14.ephec-ti.be

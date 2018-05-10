@@ -10,10 +10,20 @@ options {
 	// Uncomment the following block, and insert the addresses replacing 
 	// the all-0's placeholder.
 
- 	forwarders {
-	 	8.8.4.4;
-	 };
-
+ 	//forwarders {
+	// 	8.8.4.4;
+	// };
+	
+	acl goodclients {
+                localhost;
+                localnets;
+                54.37.65.53;
+                54.37.65.54;
+                54.37.65.61;
+        };
+        recursion yes;
+        allow-query { goodclients; };
+	
 	//========================================================================
 	// If BIND logs error messages about the root key being expired,
 	// you will need to update your keys.  See https://www.isc.org/bind-keys

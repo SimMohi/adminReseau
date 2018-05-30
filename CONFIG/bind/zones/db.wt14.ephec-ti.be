@@ -22,10 +22,12 @@ ns1	IN	A	54.37.65.61			; Cet enregistrement fait correspondre une adresse IP à 
 ;Configuration WEB
 
 web		IN	A	54.37.65.61 ; VPS - JULIEN
+fichier         IN      A       54.37.65.53 ; VPS - SIMON
 
 www		IN	CNAME	web
 b2b		IN	CNAME 	web
 intranet	IN	CNAME	web
+owncloud        IN      CNAME   fichier
 
 ;Serveur sip
 sip.wt14.ephec-ti.be.	IN	A	54.37.65.61
